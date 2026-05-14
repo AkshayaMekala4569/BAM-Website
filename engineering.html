@@ -1,0 +1,1073 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Engineering Program | Betty Ann Moore Foundation</title>
+
+    <!-- GOOGLE FONT -->
+
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+
+    <!-- FONT AWESOME -->
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<style>
+
+/* =========================
+   GLOBAL
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Outfit',sans-serif;
+    overflow-x:hidden;
+    background:#f8fbff;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+.custom-navbar{
+
+    position:fixed;
+
+    top:20px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:92%;
+
+    z-index:9999;
+}
+
+.nav-container{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:16px 35px;
+
+    border-radius:100px;
+
+    background:rgba(255,255,255,0.22);
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,0.25);
+
+    box-shadow:
+    0 15px 40px rgba(0,0,0,0.08);
+}
+
+.nav-brand{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+    text-decoration:none;
+}
+
+.nav-brand img{
+
+    width:70px;
+    height:70px;
+
+    object-fit:contain;
+
+    border-radius:50%;
+
+    background:white;
+
+    padding:5px;
+}
+
+.nav-brand span{
+
+    font-size:23px;
+
+    font-weight:800;
+
+    color:#0f172a;
+}
+
+.nav-menu{
+
+    display:flex;
+
+    gap:35px;
+
+    list-style:none;
+}
+
+.nav-menu a{
+
+    text-decoration:none;
+
+    color:#334155;
+
+    font-weight:600;
+
+    position:relative;
+}
+
+.nav-menu a::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-6px;
+
+    width:0;
+
+    height:3px;
+
+    border-radius:10px;
+
+    background:
+    linear-gradient(
+    135deg,
+    #7c4dff,
+    #ff4fa3,
+    #00c2ff
+    );
+
+    transition:0.3s ease;
+}
+
+.nav-menu a:hover::after{
+
+    width:100%;
+}
+
+.nav-btn{
+
+    text-decoration:none;
+
+    padding:14px 28px;
+
+    border-radius:50px;
+
+    background:
+    linear-gradient(
+    135deg,
+    #7c4dff,
+    #ff4fa3,
+    #00c2ff
+    );
+
+    color:white;
+
+    font-weight:700;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.engineering-hero{
+
+    position:relative;
+
+    min-height:100vh;
+
+    background-image:
+
+    linear-gradient(
+    rgba(0,0,0,0.50),
+    rgba(0,0,0,0.50)
+    ),
+
+    url('https://images.unsplash.com/photo-1581092921461-eab62e97a780?auto=format&fit=crop&w=1600&q=80');
+
+    background-size:cover;
+
+    background-position:center;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    padding:120px 20px;
+}
+
+.hero-content{
+
+    max-width:950px;
+
+    background:rgba(255,255,255,0.10);
+
+    backdrop-filter:blur(12px);
+
+    border:1px solid rgba(255,255,255,0.16);
+
+    border-radius:40px;
+
+    padding:60px;
+}
+
+.hero-tag{
+
+    display:inline-block;
+
+    padding:12px 24px;
+
+    border-radius:50px;
+
+    background:rgba(255,255,255,0.16);
+
+    color:white;
+
+    font-weight:700;
+
+    margin-bottom:28px;
+
+    letter-spacing:1px;
+}
+
+.hero-content h1{
+
+    font-size:6rem;
+
+    line-height:1.05;
+
+    color:white;
+
+    font-weight:900;
+
+    margin-bottom:30px;
+}
+
+.hero-content h1 span{
+
+    background:
+    linear-gradient(
+    135deg,
+    #7c4dff,
+    #ff4fa3,
+    #00c2ff
+    );
+
+    -webkit-background-clip:text;
+
+    -webkit-text-fill-color:transparent;
+}
+
+.hero-content p{
+
+    font-size:1.3rem;
+
+    line-height:1.9;
+
+    color:rgba(255,255,255,0.92);
+
+    margin-bottom:40px;
+}
+
+.hero-btn{
+
+    display:inline-block;
+
+    text-decoration:none;
+
+    padding:18px 38px;
+
+    border-radius:60px;
+
+    background:
+    linear-gradient(
+    135deg,
+    #7c4dff,
+    #ff4fa3,
+    #00c2ff
+    );
+
+    color:white;
+
+    font-weight:700;
+
+    transition:0.3s ease;
+}
+
+.hero-btn:hover{
+
+    transform:translateY(-5px);
+}
+
+/* =========================
+   OVERVIEW
+========================= */
+
+.overview-section{
+
+    padding:120px 7%;
+
+    background:white;
+}
+
+.overview-wrapper{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:70px;
+
+    align-items:center;
+}
+
+.overview-image img{
+
+    width:100%;
+
+    min-height:620px;
+
+    object-fit:cover;
+
+    border-radius:40px;
+
+    box-shadow:
+    0 20px 50px rgba(0,0,0,0.12);
+}
+
+.overview-content h2{
+
+    font-size:58px;
+
+    line-height:1.1;
+
+    color:#0f172a;
+
+    margin-bottom:28px;
+}
+
+.overview-content p{
+
+    font-size:20px;
+
+    line-height:1.9;
+
+    color:#475569;
+
+    margin-bottom:24px;
+}
+
+/* =========================
+   GRADE SECTION
+========================= */
+
+.grade-section{
+
+    padding:120px 7%;
+
+    background-image:
+
+    linear-gradient(
+    rgba(246,248,255,0.94),
+    rgba(242,246,255,0.96)
+    ),
+
+    url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1600&q=80');
+
+    background-size:cover;
+
+    background-position:center;
+}
+
+.section-title{
+
+    text-align:center;
+
+    margin-bottom:70px;
+}
+
+.section-title h2{
+
+    font-size:64px;
+
+    color:#0f172a;
+
+    margin-bottom:20px;
+
+    font-weight:800;
+}
+
+.section-title p{
+
+    max-width:760px;
+
+    margin:auto;
+
+    font-size:20px;
+
+    line-height:1.9;
+
+    color:#475569;
+}
+
+.grade-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:30px;
+}
+
+.grade-card{
+
+    background:rgba(255,255,255,0.82);
+
+    backdrop-filter:blur(12px);
+
+    border-radius:35px;
+
+    padding:45px 35px;
+
+    box-shadow:
+    0 20px 50px rgba(0,0,0,0.08);
+
+    transition:0.35s ease;
+}
+
+.grade-card:hover{
+
+    transform:translateY(-10px);
+}
+
+.grade-icon{
+
+    width:90px;
+    height:90px;
+
+    border-radius:28px;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    font-size:38px;
+
+    color:white;
+
+    margin-bottom:30px;
+}
+
+.kids .grade-icon{
+
+    background:
+    linear-gradient(
+    135deg,
+    #7c4dff,
+    #ff4fa3
+    );
+}
+
+.middle .grade-icon{
+
+    background:
+    linear-gradient(
+    135deg,
+    #ff4fa3,
+    #00c2ff
+    );
+}
+
+.high .grade-icon{
+
+    background:
+    linear-gradient(
+    135deg,
+    #7c4dff,
+    #00c2ff
+    );
+}
+
+.grade-card h3{
+
+    font-size:34px;
+
+    margin-bottom:24px;
+
+    color:#0f172a;
+}
+
+.topic-list{
+
+    list-style:none;
+}
+
+.topic-list li{
+
+    font-size:18px;
+
+    color:#475569;
+
+    margin-bottom:18px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+}
+
+.topic-list li i{
+
+    color:#7c4dff;
+}
+
+/* =========================
+   ACTIVITIES
+========================= */
+
+.activity-section{
+
+    padding:120px 7%;
+
+    background:white;
+}
+
+.activity-wrapper{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:30px;
+}
+
+.activity-card{
+
+    border-radius:35px;
+
+    overflow:hidden;
+
+    background:white;
+
+    box-shadow:
+    0 20px 50px rgba(0,0,0,0.08);
+
+    transition:0.35s ease;
+}
+
+.activity-card:hover{
+
+    transform:translateY(-10px);
+}
+
+.activity-card img{
+
+    width:100%;
+
+    height:280px;
+
+    object-fit:cover;
+}
+
+.activity-content{
+
+    padding:30px;
+}
+
+.activity-content h3{
+
+    font-size:30px;
+
+    margin-bottom:16px;
+
+    color:#0f172a;
+}
+
+.activity-content p{
+
+    font-size:18px;
+
+    line-height:1.8;
+
+    color:#475569;
+}
+
+/* =========================
+   CTA
+========================= */
+
+.cta-section{
+
+    padding:120px 7%;
+
+    background:
+
+    linear-gradient(
+    135deg,
+    #7c4dff,
+    #ff4fa3,
+    #00c2ff
+    );
+
+    text-align:center;
+}
+
+.cta-section h2{
+
+    font-size:64px;
+
+    color:white;
+
+    margin-bottom:24px;
+}
+
+.cta-section p{
+
+    max-width:760px;
+
+    margin:auto auto 40px;
+
+    color:rgba(255,255,255,0.92);
+
+    font-size:20px;
+
+    line-height:1.9;
+}
+
+.cta-btn{
+
+    display:inline-block;
+
+    padding:18px 38px;
+
+    border-radius:60px;
+
+    background:white;
+
+    color:#7c4dff;
+
+    text-decoration:none;
+
+    font-weight:700;
+
+    font-size:18px;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer{
+
+    padding:70px 7%;
+
+    background:#0f172a;
+
+    text-align:center;
+}
+
+.footer h2{
+
+    color:white;
+
+    font-size:42px;
+
+    margin-bottom:18px;
+}
+
+.footer p{
+
+    color:rgba(255,255,255,0.7);
+
+    font-size:18px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:991px){
+
+.nav-menu{
+    display:none;
+}
+
+.hero-content h1{
+    font-size:3.8rem;
+}
+
+.overview-wrapper,
+.grade-grid,
+.activity-wrapper{
+    grid-template-columns:1fr;
+}
+
+.section-title h2,
+.overview-content h2,
+.cta-section h2{
+    font-size:42px;
+}
+
+.hero-content{
+    padding:40px 30px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav class="custom-navbar">
+
+    <div class="nav-container">
+
+        <a href="index.html" class="nav-brand">
+
+            <img src="betty_Logo.png"
+            alt="Foundation Logo">
+
+            <span>
+                Betty Ann Moore Foundation
+            </span>
+
+        </a>
+
+        <ul class="nav-menu">
+
+            <li><a href="index.html">Home</a></li>
+
+            <li><a href="#grades">Grades</a></li>
+
+            <li><a href="#activities">Activities</a></li>
+
+        </ul>
+
+        <a href="survey.html" class="nav-btn">
+            Join Program
+        </a>
+
+    </div>
+
+</nav>
+
+<!-- HERO -->
+
+<section class="engineering-hero">
+
+    <div class="hero-content">
+
+        <span class="hero-tag">
+            ENGINEERING PROGRAM
+        </span>
+
+        <h1>
+            Build Creative Solutions With
+            <span>Engineering</span>
+        </h1>
+
+        <p>
+            Inspiring students to design, build, innovate, and solve real-world
+            challenges through hands-on engineering experiences for grades K–12.
+        </p>
+
+        <a href="#grades" class="hero-btn">
+            Explore Topics
+        </a>
+
+    </div>
+
+</section>
+
+<!-- OVERVIEW -->
+
+<section class="overview-section">
+
+    <div class="overview-wrapper">
+
+        <div class="overview-image">
+
+            <img src="https://images.unsplash.com/photo-1581092921461-eab62e97a780?auto=format&fit=crop&w=1200&q=80"
+            alt="Engineering Students">
+
+        </div>
+
+        <div class="overview-content">
+
+            <h2>
+                Encouraging Innovation Through Engineering
+            </h2>
+
+            <p>
+                Our engineering program empowers students to think critically,
+                work collaboratively, and design creative solutions through
+                exciting hands-on projects and challenges.
+            </p>
+
+            <p>
+                From building structures to robotics and sustainable design,
+                students develop innovation, leadership, teamwork, and
+                real-world problem-solving skills.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- GRADE SECTION -->
+
+<section class="grade-section" id="grades">
+
+    <div class="section-title">
+
+        <h2>
+            Engineering Topics By Grade
+        </h2>
+
+        <p>
+            Interactive engineering learning experiences that inspire innovation,
+            creativity, teamwork, and future-ready thinking skills.
+        </p>
+
+    </div>
+
+    <div class="grade-grid">
+
+        <!-- K-5 -->
+
+        <div class="grade-card kids">
+
+            <div class="grade-icon">
+                <i class="fas fa-cubes"></i>
+            </div>
+
+            <h3>K–5</h3>
+
+            <ul class="topic-list">
+
+                <li><i class="fas fa-check-circle"></i>Building Structures</li>
+
+                <li><i class="fas fa-check-circle"></i>Simple Machines</li>
+
+                <li><i class="fas fa-check-circle"></i>Bridge Challenges</li>
+
+                <li><i class="fas fa-check-circle"></i>Creative Construction</li>
+
+                <li><i class="fas fa-check-circle"></i>STEM Design Games</li>
+
+            </ul>
+
+        </div>
+
+        <!-- 6-8 -->
+
+        <div class="grade-card middle">
+
+            <div class="grade-icon">
+                <i class="fas fa-tools"></i>
+            </div>
+
+            <h3>Grades 6–8</h3>
+
+            <ul class="topic-list">
+
+                <li><i class="fas fa-check-circle"></i>Robotics Design</li>
+
+                <li><i class="fas fa-check-circle"></i>3D Model Concepts</li>
+
+                <li><i class="fas fa-check-circle"></i>Engineering Challenges</li>
+
+                <li><i class="fas fa-check-circle"></i>Energy & Motion</li>
+
+                <li><i class="fas fa-check-circle"></i>Prototype Building</li>
+
+            </ul>
+
+        </div>
+
+        <!-- 9-12 -->
+
+        <div class="grade-card high">
+
+            <div class="grade-icon">
+                <i class="fas fa-industry"></i>
+            </div>
+
+            <h3>Grades 9–12</h3>
+
+            <ul class="topic-list">
+
+                <li><i class="fas fa-check-circle"></i>CAD Fundamentals</li>
+
+                <li><i class="fas fa-check-circle"></i>Mechanical Engineering</li>
+
+                <li><i class="fas fa-check-circle"></i>Electrical Systems</li>
+
+                <li><i class="fas fa-check-circle"></i>Renewable Energy</li>
+
+                <li><i class="fas fa-check-circle"></i>Innovation Projects</li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ACTIVITIES -->
+
+<section class="activity-section" id="activities">
+
+    <div class="section-title">
+
+        <h2>
+            Hands-On Engineering Activities
+        </h2>
+
+        <p>
+            Creative engineering projects that encourage students to explore,
+            invent, collaborate, and solve exciting real-world challenges.
+        </p>
+
+    </div>
+
+    <div class="activity-wrapper">
+
+        <div class="activity-card">
+
+            <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1200&q=80"
+            alt="Engineering Challenge">
+
+            <div class="activity-content">
+
+                <h3>
+                    Design Challenges
+                </h3>
+
+                <p>
+                    Students build bridges, towers, and creative structures
+                    while learning teamwork and engineering thinking.
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="activity-card">
+
+            <img src="https://images.unsplash.com/photo-1581092921461-eab62e97a780?auto=format&fit=crop&w=1200&q=80"
+            alt="Robotics">
+
+            <div class="activity-content">
+
+                <h3>
+                    Robotics Engineering
+                </h3>
+
+                <p>
+                    Youth explore robotics, mechanics, and innovation through
+                    interactive hands-on engineering experiences.
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="activity-card">
+
+            <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80"
+            alt="Innovation Projects">
+
+            <div class="activity-content">
+
+                <h3>
+                    Innovation Projects
+                </h3>
+
+                <p>
+                    Students create practical solutions and engineering prototypes
+                    for meaningful community and real-world problems.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- CTA -->
+
+<section class="cta-section">
+
+    <h2>
+        Inspire Future Engineers & Innovators
+    </h2>
+
+    <p>
+        Help students discover creativity, problem-solving, and innovation
+        through engaging engineering learning experiences and projects.
+    </p>
+
+    <a href="survey.html"
+    class="cta-btn">
+
+        Get Involved
+
+    </a>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer class="footer">
+
+    <h2>
+        Betty Ann Moore Foundation
+    </h2>
+
+    <p>
+        Empowering youth through creativity, learning, mentorship, and opportunity.
+    </p>
+
+</footer>
+
+</body>
+
+</html>
